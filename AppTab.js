@@ -4,13 +4,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import AppList from './AppList';
 import AppForm from './AppForm';
-
+ 
 const {Navigator, Screen} = createBottomTabNavigator();
 
 function AppTab(){
     return (
         <NavigationContainer>
             <Navigator
+                initialRouteName="AppList"
                 tabBarOptions={{
                     style: {
                         elevation: 0,
@@ -32,8 +33,16 @@ function AppTab(){
                     activeTintColor: '#32264d'
                 }}
             >
-                <Screen name="AppList" component={AppList} />
-                <Screen name="AppForm" component={AppForm} />
+                <Screen name="AppList" component={AppList}
+                    options={{
+                        tabBarLabel: "Compras"
+                    }}
+                />
+                <Screen name="AppForm" component={AppForm}
+                    options={{
+                        tabBarLabel: "Adicionar"
+                    }}
+                />
             </Navigator>
         </NavigationContainer>
     );
