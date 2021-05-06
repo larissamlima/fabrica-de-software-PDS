@@ -25,7 +25,7 @@ export default function AppForm({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Item para comprar</Text>
+      <Text style={styles.title}>Inserir novo artigo</Text>
       <View style={styles.inputContainer}> 
         <TextInput 
           style={styles.input} 
@@ -41,8 +41,7 @@ export default function AppForm({ route, navigation }) {
           value={artigo} /> 
           <TouchableOpacity style={styles.button} onPress={handleButtonPress}> 
             <View style={styles.buttonContainer}>
-              <Icon name="save" size={22} color="white" />
-              <Text style={styles.buttonText}>Salvar</Text> 
+              <Text style={styles.buttonText}>Publicar</Text> 
             </View>
           </TouchableOpacity> 
       </View>

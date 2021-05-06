@@ -35,12 +35,12 @@ function AppTab(){
             >
                 <Screen name="AppList" component={AppList}
                     options={{
-                        tabBarLabel: "Compras"
+                        tabBarLabel: "Artigos"
                     }}
                 />
                 <Screen name="AppForm" component={AppForm}
                     options={{
-                        tabBarLabel: "Adicionar"
+                        tabBarLabel: "Inserir"
                     }}
                 />
             </Navigator>
