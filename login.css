@@ -96,16 +96,16 @@ button:focus {
 
 .btn-color:hover {
   color: #fff;
-  background-image: linear-gradient(to right, #d500f9, #ffd54f);
+  background-image: linear-gradient(to right, #f65f23, #ffd54f);
 }
 
 .btn-white {
   border-radius: 50px;
-  color: #d500f9;
+  color: #f68b44;
   background-color: #fff;
   padding: 8px 40px;
   cursor: pointer;
-  border: 2px solid #d500f9 !important;
+  border: 2px solid #e7662a !important;
 }
 
 .btn-white:hover {
