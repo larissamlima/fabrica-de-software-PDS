@@ -3,13 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-client_id" content="14706299490-58unijfacur9pb1sp1n65ojpodro3484.apps.googleusercontent.com.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="14706299490-58unijfacur9pb1sp1n65ojpodro3484.apps.googleusercontent.com">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link rel="stylesheet" href="cadastro.css">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+          }
+        </script>
 </head>
 
 <body>
@@ -30,7 +39,7 @@
                             <h3 class="mb-1">Crie sua conta no Alfredo</h3>
                             <p class="mb-4 text-sm">Já chamou o Alfredo? <a class="text-primary login">Entrar</a></p>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="g-signin2" data-onsuccess="OnSignIn">
                                     <p class="google"><span class="fa fa-google"></span><small class="pl-3 pr-1">Entrar com Google</small></p>
                                 </div>
                                 <div class="col-sm-6">
@@ -65,6 +74,7 @@
             </div>
         </div>
     </form>
+   
 </body>
 
 </html>
