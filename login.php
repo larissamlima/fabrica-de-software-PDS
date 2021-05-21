@@ -1,6 +1,6 @@
 <?php
 $email = $_POST['email'];
-$entrar = $_POST['entrar'];
+#$entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
 $connect = mysqli_connect('localhost', 'root', '');
 $db = mysqli_select_db($connect, 'alfredo');
