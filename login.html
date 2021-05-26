@@ -10,9 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link rel="stylesheet" href="login.css">
+    <meta name="google-signin-client_id" content="14706299490-58unijfacur9pb1sp1n65ojpodro3484.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+          }
+        </script>
+
     <form method="POST" action="login.php">
         <div class="container px-4 py-5 mx-auto">
             <div class="card card0">
@@ -30,15 +42,23 @@
                             </div>
                         </div>
                         <div class="bottom text-center mb-5">
+                            
+                            
                             <p href="#" class="sm-text mx-auto mb-3">Não possui uma conta?<button class="btn btn-white ml-2"><a href="cadastro.html">Criar nova conta</a></button></p>
+                        
                         </div>
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     </div>
+
                     <div class="card card2">
+                        
+
                         <div class="my-auto mx-md-5 px-md-5 right">
                             <h3 class="text-white">Chama o Alfredo!</h3> <small class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </form>
