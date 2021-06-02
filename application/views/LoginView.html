@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
-    <link rel="stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/login.css">>
+    <link rel="stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/login.css">
     <meta name="google-signin-client_id" content="14706299490-58unijfacur9pb1sp1n65ojpodro3484.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
@@ -40,7 +40,7 @@
                         <div class="bottom text-center mb-5">
                             
                             
-                            <p href="#" class="sm-text mx-auto mb-3">Não possui uma conta?<button class="btn btn-white ml-2"><a href="cadastro.html">Criar nova conta</a></button></p>
+                            <p href="#" class="sm-text mx-auto mb-3">Não possui uma conta?<button class="btn btn-white ml-2"><a href="<?php echo base_url(); ?>index.php/LoginController/cadastrar">Criar nova conta</a></button></p>
                         
                         </div>
                         <div class="g-signin2" data-onsuccess="onSignIn"></div>

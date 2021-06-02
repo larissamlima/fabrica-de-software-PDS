@@ -36,4 +36,9 @@ class LoginController extends CI_Controller
 	{
 		$this->load->view('LoginView.html');
 	}
+
+	public function cadastrar()
+	{
+		$this->load->view('CadastroView.html');
+	}
 }
