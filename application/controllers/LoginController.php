@@ -30,9 +30,10 @@ class LoginController extends CI_Controller
 	public function index()
 	{
 		$users = new LoginModel;
+		$this->load->view('LoginView.html');
 	}
 
-	public function criarUsuario()
+	public function login()
 	{
 		$this->load->view('LoginView.html');
 	}
@@ -40,5 +41,18 @@ class LoginController extends CI_Controller
 	public function cadastrar()
 	{
 		$this->load->view('CadastroView.html');
+	}
+
+	public function inserirCadastro()
+	{
+		$cadastro = new LoginModel;
+		$data = array(
+			'nome' => $this->input->post('nome'),
+			'sobrenome' => $this->input->post('sobrenome'),
+			'email' => $this->input->post('email'),
+			'senha' => $this->input->post('senha')
+		);
+		$cadastro->registrar($data);
+		redirect(base_url('index.php/LoginController/login'));
 	}
 }

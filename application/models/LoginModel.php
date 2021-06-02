@@ -1,6 +1,12 @@
 <?php
-class LoginModel extends CI_Model{
-    
+class LoginModel extends CI_Model
+{
+
+    public function registrar($data)
+    {
+        $this->load->database();
+        return $this->db->insert('usuarios', $data);
+    }
     // public function get_products(){
     //     if(!empty($this->input->get("search"))){
     //       $this->db->like('title', $this->input->get("search"));
@@ -31,4 +37,3 @@ class LoginModel extends CI_Model{
     //     }        
     // }
 }
-?>
