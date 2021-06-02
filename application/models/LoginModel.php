@@ -4,8 +4,17 @@ class LoginModel extends CI_Model
 
     public function registrar($data)
     {
-        $this->load->database();
+
         return $this->db->insert('usuarios', $data);
+    }
+
+    public function obterUsuario($email)
+    {
+        $this->db->select('email, senha');
+        $this->db->from('usuarios');
+        $this->db->where('email', $email);
+        $query = $this->db->get();
+        return $query->result_array();
     }
     // public function get_products(){
     //     if(!empty($this->input->get("search"))){
